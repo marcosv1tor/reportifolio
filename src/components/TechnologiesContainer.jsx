@@ -6,26 +6,33 @@ import {
   DiMysql,
   DiReact,
   DiGit,
-  DiPhp
+  DiPhp,
+  DiDotnet,
+  DiAngularSimple,
+  DiTypo3,
+  DiSass,
+  DiDocker
 } from 'react-icons/di'
 
 import '../styles/components/technologiescontainer.sass'
 
 const technologies = [
-  { id: 'html', name:'HTML5', icon: <DiHtml5 />},
-  { id: 'css', name: 'CSS3', icon: <DiCss3 />},
-  { id: 'js', name: 'JavaScript', icon: <DiJsBadge />},
-  { id: 'node', name: 'Node.js', icon: <DiNodejsSmall />},
-  //{ id: 'mysql', name: 'MySQL', icon: <DiMysql />},
-  { id: 'react', name: 'React', icon: <DiReact />},
-  { id: 'git', name: 'Git', icon: <DiGit />},
-  { id: 'php', name: 'Php', icon: <DiPhp/>}
+  { id: '.net', name: '.net', icon: <DiDotnet /> },
+  { id: 'html', name: 'HTML5', icon: <DiHtml5 /> },
+  { id: 'scss', name: 'SASS', icon: <span style={{ color: 'pink' }}> <DiSass /></span> },
+  { id: 'js', name: 'JavaScript', icon: <DiJsBadge /> },
+  { id: 'node', name: 'Node.js', icon: <DiNodejsSmall /> },
+  { id: 'mysql', name: 'MySQL', icon: <DiMysql /> },
+  { id: 'angular', name: 'Angular', icon: <span style={{ color: 'red' }}><DiAngularSimple /></span> }, // Ícone vermelho
+  { id: 'react', name: 'React', icon: <DiReact /> },
+  { id: 'git', name: 'Git', icon: <DiGit /> },
+  { id: 'docker', name: 'Docker', icon: <span style={{ color: 'blue' }}><DiDocker /></span> },
 ];
 
 const TechnologiesContainer = () => {
   return (
     <section className="technologies-container">
-      <h2>Tecnologias</h2>
+      <h2> Algumas Tecnologias</h2>
       <div className="technologies-grid">
         {technologies.map((tech) => (
           <div className="technology-card" id={tech.id} key={tech.id}>
